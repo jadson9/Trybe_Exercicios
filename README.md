@@ -1,4 +1,4 @@
-Trybe
+#Trybe Exercicios
 
 Este repositório possui todos os exercicios de aprendizagem desenvolvidas pr Jadson Cerqueira enquanto estudava na Trybe,
 
