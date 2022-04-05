@@ -8,3 +8,6 @@ li:hover {
 li:active {
     font-family: sans-serif;
 }
+ol , ul {
+    list-style: none;
+}
