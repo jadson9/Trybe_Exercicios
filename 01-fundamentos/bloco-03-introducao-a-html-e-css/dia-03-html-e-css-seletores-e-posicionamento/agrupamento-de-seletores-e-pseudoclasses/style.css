@@ -5,3 +5,6 @@ li:hover {
     background-color: red;
     color: white;
 }
+li:active {
+    font-family: sans-serif;
+}
