@@ -1,3 +1,7 @@
 hi, p {
     text-align: center;
 }
+li:hover {
+    background-color: red;
+    color: white;
+}
