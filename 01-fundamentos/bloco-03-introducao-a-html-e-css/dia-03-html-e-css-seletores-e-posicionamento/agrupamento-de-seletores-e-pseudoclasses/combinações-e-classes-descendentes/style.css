@@ -29,3 +29,26 @@ li em {
 .tres-primeiros.java {
     background-color: pink ;
 }
+#stack:hover {
+    color: orange;
+    font-weight: bold;
+}
+#w3:hover {
+    color: green;
+    font-weight: bold;
+}
+
+#mozila:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#dev:hover {
+    color: rgb(251, 255, 4);
+    font-weight: bold;
+}
+
+#trybe:hover {
+    color: rgb(0, 255, 0);
+    font-weight: bold;
+}
