@@ -21,6 +21,8 @@ h3 {
 }
 #cor-complementar {
     background-color: aquamarine;
+    height: 30px;
+    padding-top: 5px;
 }
 #cor-escura {
     background-color: blue;
