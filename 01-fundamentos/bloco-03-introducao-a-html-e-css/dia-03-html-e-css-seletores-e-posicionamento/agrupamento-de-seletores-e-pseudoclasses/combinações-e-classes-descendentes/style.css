@@ -22,3 +22,10 @@ li {
 li em {
     font-weight: 100;
 }
+.tres-primeiros {
+    color: blue;
+}
+
+.tres-primeiros.java {
+    background-color: pink ;
+}
