@@ -1,0 +1,60 @@
+h1 {
+    text-align: center;
+  }
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px;
+    
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    list-style: none;
+    
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    list-style: none;
+  }
+.premiacoes {
+      text-align: center;
+      list-style: none;
+  }
+
+.premiacoes li {
+    list-style: none;
+}
+.resultados {
+    
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    position: relative;
+    
+   
+
+}
+
+.second, .third {
+    display: inline-block;
+    margin-top: 50px;
+}
