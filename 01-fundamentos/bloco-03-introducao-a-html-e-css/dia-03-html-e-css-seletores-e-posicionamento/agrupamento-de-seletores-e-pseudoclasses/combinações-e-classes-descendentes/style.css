@@ -1,0 +1,54 @@
+.lista-ordenada {
+    background-color: yellow;
+}
+
+.par {
+    color: green;
+}
+
+.impar {
+    text-transform: uppercase;
+}
+body {
+    color: red;
+}
+em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+li {
+    font-size: 20px;
+}
+li em {
+    font-weight: 100;
+}
+.tres-primeiros {
+    color: blue;
+}
+
+.tres-primeiros.java {
+    background-color: pink ;
+}
+#stack:hover {
+    color: orange;
+    font-weight: bold;
+}
+#w3:hover {
+    color: green;
+    font-weight: bold;
+}
+
+#mozila:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#dev:hover {
+    color: rgb(251, 255, 4);
+    font-weight: bold;
+}
+
+#trybe:hover {
+    color: rgb(0, 255, 0);
+    font-weight: bold;
+}
