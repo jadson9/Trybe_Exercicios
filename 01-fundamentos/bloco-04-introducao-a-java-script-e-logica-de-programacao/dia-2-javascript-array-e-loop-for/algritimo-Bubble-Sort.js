@@ -10,4 +10,17 @@ for (let i = 1; i < numbers.length; i += 1){
     }
 
 }
-console.log(numbers)
+console.log("Ordem crescente", numbers)
+
+for (let i = 1; i < numbers.length; i += 1){
+    for (let toi = 0; toi < i; toi += 1){
+        if (numbers[i] > numbers[toi]){
+            let aux = numbers[toi]
+            numbers[toi] = numbers[i]
+            numbers[i] = aux
+        }
+    }
+
+}
+
+console.log("Ordem decrescente", numbers)
