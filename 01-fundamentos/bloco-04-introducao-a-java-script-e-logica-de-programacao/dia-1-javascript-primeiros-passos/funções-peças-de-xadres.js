@@ -1,5 +1,5 @@
-let peca = "carro";
-
+let peca0 = "Peão";
+let peca = peca0.toLowerCase()
 switch (peca){
 
     case "peão":
