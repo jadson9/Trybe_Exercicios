@@ -6,4 +6,7 @@ let info = {
 
 console.log('Bem vinda,', info['personagem'])
 info['recorrente'] = 'Sim'
+for (x in info) {
+    console.log(x)
+}
 
