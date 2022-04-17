@@ -10,3 +10,7 @@ for (x in info) {
     console.log(x)
 }
 
+for (x in info) {
+    console.log(info[x])
+}
+
