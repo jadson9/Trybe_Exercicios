@@ -10,3 +10,9 @@ let leitor = {
       },
     ],
   };
+
+let nome = leitor['nome']
+let sobreNome = leitor['sobrenome']
+
+
+console.log('O livro favorito de '+ nome + ' ' + sobreNome + ' se chama ' + leitor.livrosFavoritos[0].titulo)
