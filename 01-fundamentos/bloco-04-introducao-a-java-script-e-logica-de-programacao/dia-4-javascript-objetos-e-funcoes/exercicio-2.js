@@ -22,4 +22,4 @@ leitor.livrosFavoritos.push({
     editora: 'Rocco',
   })
 
-console.log(leitor.livrosFavoritos)
+console.log('Julia tem ' + leitor.livrosFavoritos.length + ' livros favoritos')
