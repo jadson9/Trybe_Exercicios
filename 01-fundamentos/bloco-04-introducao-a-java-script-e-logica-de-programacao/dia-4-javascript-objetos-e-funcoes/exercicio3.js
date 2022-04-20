@@ -28,4 +28,4 @@ function nomeMaior(arrayNomes) {
   }
   return arrayNomes[maiorNumero(listQuantidade)]
 }
- console.log(nomeMaior(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana', 'Alessandra']))
+
