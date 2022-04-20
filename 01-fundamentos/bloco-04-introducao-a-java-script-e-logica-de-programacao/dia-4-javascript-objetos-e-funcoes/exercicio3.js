@@ -43,3 +43,14 @@ function numerosRepetidos(listNumber) {
   }
   return listNumber[maiorNumero(list)]
 }
+function somatorioNumeros(number) {
+  let listNumber = [];
+  let somatorio = 0
+  for (let i = 1; i <= number; i += 1) {
+    listNumber.push(i)
+  }
+  for (let i2 = 0; i2 < listNumber.length; i2 += 1) {
+      somatorio += listNumber[i2]
+  }
+  return somatorio
+}
