@@ -54,3 +54,14 @@ function somatorioNumeros(number) {
   }
   return somatorio
 }
+function verificaFinal(word, ending) {
+    let final = '';
+    for (let i = 1; i < ending.length + 1; i += 1) {
+        final += word[word.length - i]
+    }
+    final = final.split('')
+    final = final.reverse()
+    final = final.join('')
+    return final === ending
+}
+console.log(verificaFinal('trybe', 'be'))
