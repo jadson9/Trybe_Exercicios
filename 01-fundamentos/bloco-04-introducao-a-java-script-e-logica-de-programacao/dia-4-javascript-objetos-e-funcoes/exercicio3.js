@@ -17,7 +17,15 @@ function maiorNumero(array) {
 }
 
 function menorNumero(array) {
-    let numeroMenor = Math.min.apply(Math, array);
-    return array.indexOf(numeroMenor);
+  let numeroMenor = Math.min.apply(Math, array);
+  return array.indexOf(numeroMenor);
+}
+
+function nomeMaior(arrayNomes) {
+  let listQuantidade = []
+  for (let i = 0; i < arrayNomes.length; i += 1 ) {
+    listQuantidade.push(arrayNomes[i].length)
   }
-console.log(maiorNumero([2, 4, 6, 7, 10, 0, -3]))
+  return arrayNomes[maiorNumero(listQuantidade)]
+}
+ console.log(nomeMaior(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana', 'Alessandra']))
