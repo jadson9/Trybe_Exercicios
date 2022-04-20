@@ -29,3 +29,17 @@ function nomeMaior(arrayNomes) {
   return arrayNomes[maiorNumero(listQuantidade)]
 }
 
+function numerosRepetidos(listNumber) {
+  let list = [];
+  let cont = 0;
+  for (let i = 0; i < listNumber.length; i += 1) {
+      for (let i2 = 0; i2 < listNumber.length; i2 += 1) {
+          if (listNumber[i] === listNumber[i2]) {
+            cont += 1
+          }
+      }
+      list.push(cont)
+      cont = 0
+  }
+  return listNumber[maiorNumero(list)]
+}
