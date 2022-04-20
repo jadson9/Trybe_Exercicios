@@ -12,11 +12,12 @@ function verificapalindromo(palavra) {
 }
 
 function maiorNumero(array) {
-  let numeroMaior = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > numeroMaior) {
-      numeroMaior = i;
-    }
-  }
-  return numeroMaior;
+    let numeroMaior = Math.max.apply(Math, array);
+    return array.indexOf(numeroMaior);
 }
+
+function menorNumero(array) {
+    let numeroMenor = Math.min.apply(Math, array);
+    return array.indexOf(numeroMenor);
+  }
+console.log(maiorNumero([2, 4, 6, 7, 10, 0, -3]))
