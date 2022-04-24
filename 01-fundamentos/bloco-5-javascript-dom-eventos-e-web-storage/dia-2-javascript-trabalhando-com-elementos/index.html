@@ -55,32 +55,40 @@
       }
     </style>
   </head>
-  <body class="pagina-principal">
+  <body id="pagina">
     <script>
-      let mainPai = document.querySelector('.main-content')
-      let elBody = document.querySelector('.pagina-principal')
-      let sectionPai = document.querySelector('.center-content')
-      let elementoP = document.createElement('p')
-      let elementoH1 = document.createElement('h1')
-      let elementoMain = document.createElement('main')
-      let elementoSection = document.createElement('section')
-      elementoH1.innerText = 'Exercício 5.2 - JavaScript DOM'
-      elementoMain.className = 'main-content'
-      elementoSection.className = 'center-content'
-      elementoP.innerText = 'Este é um paragrafo criado dinamicamente'
-      elBody.appendChild(elementoH1)
-      elBody.appendChild(elementoMain)
-      mainPai.appendChild(elementoSection)
-      sectionPai.appendChild(elementoP)
+      let bodyPai = document.querySelector('#pagina')
+      let elementH1 = document.createElement('h1')
+      elementH1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      bodyPai.appendChild(elementH1)
+
+      let elementMain = document.createElement('main')
+      elementMain.className = 'main-content'
+      bodyPai.appendChild(elementMain)
       
+      let mainPai = document.querySelector('.main-content')
+      let elementSection = document.createElement('section')
+      elementSection.className = 'center-content'
+      mainPai.appendChild(elementSection)
 
-      let sectionClassRi = document.createElement('section')
-      sectionClassRi.className = 'left-content'
-      mainPai.appendChild(sectionClassRi)
+      let sectionPai = document.querySelector('.center-content')
+      let elementP = document.createElement('p')
+      elementP.innerText = 'Este é um texto adicionado dinamicamente'
+      sectionPai.appendChild(elementP)
 
-      let sectionClassLe = document.createElement('section')
-      sectionClassRi.className = 'right-content'
-      mainPai.appendChild(sectionClassLe)
+      let elementSection2 = document.createElement('section')
+      elementSection2.className = 'left-content'
+      mainPai.appendChild(elementSection2)
+
+      let elementSection3 = document.createElement('section')
+      elementSection3.className = 'right-content'
+      mainPai.appendChild(elementSection3)
+
+      let sectionPaiLeft = document.querySelector('.left-content')
+      let elementImg= document.createElement('img')
+      elementImg.src = 'https://picsum.photos/200'
+      elementImg.className = 'small-image'
+      sectionPaiLeft.appendChild(elementImg)
     </script>
   </body>
 </html>
