@@ -57,13 +57,17 @@
   </head>
   <body class="pagina-principal">
     <script>
+      let mainPai = document.querySelector('.main-content')
       let elBody = document.querySelector('.pagina-principal')
       let elementoH1 = document.createElement('h1')
       let elementoMain = document.createElement('main')
+      let elementoSection = document.createElement('section')
       elementoH1.innerText = 'Exercício 5.2 - JavaScript DOM'
       elementoMain.className = 'main-content'
+      elementoSection.className = 'center-content'
       elBody.appendChild(elementoH1)
       elBody.appendChild(elementoMain)
+      mainPai.appendChild(elementoSection)
     </script>
   </body>
 </html>
