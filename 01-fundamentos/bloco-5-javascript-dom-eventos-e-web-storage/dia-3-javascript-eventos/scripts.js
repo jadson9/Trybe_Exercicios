@@ -19,7 +19,7 @@ function createDaysOfTheWeek() {
     let diasSemana = document.createElement('li')
     diasSemana.className = 'day'
     if (dia === 24 || dia === 25 || dia === 31){
-      diasSemana.className = 'day holyday'
+      diasSemana.className = 'day holiday'
     } else if(dia === 4 || dia === 11 || dia === 18 || dia === 25) {
       diasSemana.className = 'day friday'
     }
@@ -33,4 +33,13 @@ function createDaysOfTheWeek() {
   botao.innerText = 'Feriados'
   botao.id = "btn-holiday"
   botaoPai.appendChild(botao)
+
+  botao.addEventListener("click", mudaCor )
+  function mudaCor(){
+    let dias = document.getElementsByClassName('holiday')
+    for (let i = 0; i < dias.length; i += 1) {
+      dias[i].style.backgroundColor = 'rgb(255, 255, 255)' 
+    }
+  }
+
   // Escreva seu código abaixo.
