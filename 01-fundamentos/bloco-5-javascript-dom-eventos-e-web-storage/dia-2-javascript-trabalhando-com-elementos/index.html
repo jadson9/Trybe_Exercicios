@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id="pagina">
+    <script>
+      let bodyPai = document.querySelector('#pagina')
+      let elementH1 = document.createElement('h1')
+      elementH1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      bodyPai.appendChild(elementH1)
+
+      let elementMain = document.createElement('main')
+      elementMain.className = 'main-content'
+      bodyPai.appendChild(elementMain)
+      
+      let mainPai = document.querySelector('.main-content')
+      let elementSection = document.createElement('section')
+      elementSection.className = 'center-content'
+      mainPai.appendChild(elementSection)
+
+      let sectionPai = document.querySelector('.center-content')
+      let elementP = document.createElement('p')
+      elementP.innerText = 'Este é um texto adicionado dinamicamente'
+      sectionPai.appendChild(elementP)
+
+      let elementSection2 = document.createElement('section')
+      elementSection2.className = 'left-content'
+      mainPai.appendChild(elementSection2)
+
+      let elementSection3 = document.createElement('section')
+      elementSection3.className = 'right-content'
+      mainPai.appendChild(elementSection3)
+
+      let sectionPaiLeft = document.querySelector('.left-content')
+      let elementImg= document.createElement('img')
+      elementImg.src = 'https://picsum.photos/200'
+      elementImg.className = 'small-image'
+      sectionPaiLeft.appendChild(elementImg)
+
+      let sectionPaiRigth = document.querySelector('.right-content')
+      let elementUl = document.createElement('ul')
+      elementUl.className = 'lista'
+      sectionPaiRigth.appendChild(elementUl)
+      let sectionUl = document.querySelector('.lista')
+      let conteudolista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+      for (let i = 0; i < conteudolista.length; i += 1) {
+          let element = conteudolista[i]
+          let elementLi = document.createElement('li')
+          elementLi.innerText = element
+          sectionUl.appendChild(elementLi)
+
+      }
+
+      for (let i = 0; i < 2; i += 1) {
+        let elementH3 = document.createElement('h3')
+        mainPai.appendChild(elementH3)
+      }
+
+      elementH1.className = 'title'
+      document.getElementsByTagName('h3').className = 'description'
+
+      mainPai.removeChild(sectionPaiLeft)
+      
+      sectionPaiRigth.style.marginRight = "auto"
+
+      sectionPai.style.backgroundColor = 'green'
+      let ultimo = document.getElementsByTagName('li')[document.getElementsByTagName('li').length -1]
+      let penultimo = document.getElementsByTagName('li')[document.getElementsByTagName('li').length -2]
+      sectionUl.removeChild(ultimo)
+      sectionUl.removeChild(penultimo)
+
+      
+    </script>
+  </body>
+</html>
