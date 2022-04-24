@@ -27,4 +27,10 @@ function createDaysOfTheWeek() {
     ulPai.appendChild(diasSemana)
 
   }
+
+  let botaoPai = document.querySelector('.buttons-container')
+  let botao = document.createElement('button')
+  botao.innerText = 'Feriados'
+  botao.id = "btn-holiday"
+  botaoPai.appendChild(botao)
   // Escreva seu código abaixo.
