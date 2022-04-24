@@ -55,11 +55,15 @@
       }
     </style>
   </head>
-  <body>
+  <body class="pagina-principal">
     <script>
-      elementoH1 = document.createElement('h1')
+      let elBody = document.querySelector('.pagina-principal')
+      let elementoH1 = document.createElement('h1')
+      let elementoMain = document.createElement('main')
       elementoH1.innerText = 'Exercício 5.2 - JavaScript DOM'
-      document.body.appendChild(elementoH1)
+      elementoMain.className = 'main-content'
+      elBody.appendChild(elementoH1)
+      elBody.appendChild(elementoMain)
     </script>
   </body>
 </html>
