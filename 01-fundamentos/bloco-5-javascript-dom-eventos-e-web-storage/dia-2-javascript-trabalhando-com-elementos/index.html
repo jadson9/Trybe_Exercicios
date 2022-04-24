@@ -89,6 +89,21 @@
       elementImg.src = 'https://picsum.photos/200'
       elementImg.className = 'small-image'
       sectionPaiLeft.appendChild(elementImg)
+
+      let sectionPaiRigth = document.querySelector('.right-content')
+      let elementUl = document.createElement('ul')
+      elementUl.className = 'lista'
+      sectionPaiRigth.appendChild(elementUl)
+      let sectionUl = document.querySelector('.lista')
+      let conteudolista = ['um', 'doi', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+      for (let i = 0; i < conteudolista.length; i += 1) {
+          let element = conteudolista[i]
+          let elementLi = document.createElement('li')
+          elementLi.innerText = element
+          sectionUl.appendChild(elementLi)
+
+
+      }
     </script>
   </body>
 </html>
