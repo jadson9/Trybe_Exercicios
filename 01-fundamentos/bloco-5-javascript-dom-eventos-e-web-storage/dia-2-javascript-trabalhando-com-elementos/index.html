@@ -59,15 +59,19 @@
     <script>
       let mainPai = document.querySelector('.main-content')
       let elBody = document.querySelector('.pagina-principal')
+      let sectionPai = document.querySelector('.center-content')
+      let elementoP = document.createElement('p')
       let elementoH1 = document.createElement('h1')
       let elementoMain = document.createElement('main')
       let elementoSection = document.createElement('section')
       elementoH1.innerText = 'Exercício 5.2 - JavaScript DOM'
       elementoMain.className = 'main-content'
       elementoSection.className = 'center-content'
+      elementoP.innerText = 'Este é um paragrafo criado dinamicamente'
       elBody.appendChild(elementoH1)
       elBody.appendChild(elementoMain)
       mainPai.appendChild(elementoSection)
+      sectionPai.appendChild(elementoP)
     </script>
   </body>
 </html>
