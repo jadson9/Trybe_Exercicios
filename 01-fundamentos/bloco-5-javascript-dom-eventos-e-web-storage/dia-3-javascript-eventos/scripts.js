@@ -78,5 +78,21 @@ function createDaysOfTheWeek() {
       }
     }
   }
+  intemList = document.getElementsByClassName('day')
+  for (let i = 0; i < intemList.length; i += 1) {
+    intemList[i].addEventListener('mouseover', zoom)
+    intemList[i].addEventListener('mouseout', volNormal)
+  }
+  function zoom (event){
+    let elemento = event.target
+    elemento.style.fontWeight = 600
+    elemento.style.fontSize = '23px'
+  }
+  function volNormal (event){
+    let elemento = event.target
+    elemento.style.fontWeight = 100
+    elemento.style.fontSize = '20px'
+  }
+  
 
   // Escreva seu código abaixo.
