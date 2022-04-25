@@ -97,6 +97,7 @@ function volNormal (event){
 
 let buttonAdicionar = document.querySelector('#btn-add')
 buttonAdicionar.addEventListener('click', minhasTarefas)
+document.querySelector('#task-input').addEventListener('keydown', pegaEnter)
 
 let tasksImput = document.querySelector('#task-input')
 let divMytasks = document.querySelector('.my-tasks')
@@ -105,7 +106,17 @@ function minhasTarefas () {
   tarefa.style.display = 'block'
   tarefa.innerText = tasksImput.value
   divMytasks.appendChild(tarefa)
+  if (tasksImput.value === '') {
+    alert("Prenecha o Campo com uma tarefa!")
+  }
   
+}
+
+function pegaEnter(event) {
+  let tecla = event.keyCode
+  if (tasksImput.value === '' && tecla === 13) {
+    alert("Prenecha o Campo com uma tarefa!")
+  }
 }
 
 function adcionaCor(text) {
