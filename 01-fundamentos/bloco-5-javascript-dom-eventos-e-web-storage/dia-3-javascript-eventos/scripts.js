@@ -93,6 +93,20 @@ function createDaysOfTheWeek() {
     elemento.style.fontWeight = 100
     elemento.style.fontSize = '20px'
   }
+
+  let buttonAdicionar = document.querySelector('#btn-add')
+  buttonAdicionar.addEventListener('click', minhasTarefas)
+
+  let tasksImput = document.querySelector('#task-input')
+  let divMytasks = document.querySelector('.my-tasks')
+  function minhasTarefas () {
+    let tarefa = document.createElement('span')
+    tarefa.style.display = 'block'
+    tarefa.innerText = tasksImput.value
+    divMytasks.appendChild(tarefa)
+    
+  }
+
   
 
   // Escreva seu código abaixo.
