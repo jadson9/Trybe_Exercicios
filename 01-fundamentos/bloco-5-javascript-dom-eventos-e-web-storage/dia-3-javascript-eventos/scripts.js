@@ -68,7 +68,7 @@ function mudaNome(){
   if (interruptor2 == 0) {
     for (let i = 0; i < dias2.length; i += 1) {
       listAux.push(dias2[i].innerText)
-      dias2[i].innerText = '#Sexteouu!' 
+      dias2[i].innerText = '#Sextouu!' 
       interruptor2 = 1
     }
   } else if (interruptor2 == 1) {
@@ -82,6 +82,7 @@ intemList = document.getElementsByClassName('day')
 for (let i = 0; i < intemList.length; i += 1) {
   intemList[i].addEventListener('mouseover', zoom)
   intemList[i].addEventListener('mouseout', volNormal)
+  intemList[i].addEventListener('click', atribuiCor)
 }
 function zoom (event){
   let elemento = event.target
@@ -113,7 +114,7 @@ function adcionaCor(text) {
   element.style.backgroundColor = text
   divMytasks.appendChild(element)
 }
-adcionaCor('red')
+adcionaCor('blue')
 
 document.querySelector('.task').addEventListener("click", selecionado )
 let interruptorAdicionaEvento = 0;
@@ -126,7 +127,18 @@ function selecionado(event) {
     interruptorAdicionaEvento = 0
   }
 }
+let interruptorAtribuirCor = 0;
+function atribuiCor(event) {
+  let elemento = event.target
+  if (interruptorAtribuirCor === 0) {
+    elemento.style.color = document.querySelector('.selected').style.backgroundColor
+    interruptorAtribuirCor = 1
+  } else if (interruptorAtribuirCor === 1) {
+    elemento.style.color = 'rgb(119,119,119)'
+    interruptorAtribuirCor = 0
+  }
 
+}
   
 
   // Escreva seu código abaixo.
