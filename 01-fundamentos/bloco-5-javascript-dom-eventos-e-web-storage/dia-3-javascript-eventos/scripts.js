@@ -107,6 +107,13 @@ function createDaysOfTheWeek() {
     
   }
 
+  function adcionaCor(text) {
+    let element = document.createElement('div')
+    element.className = 'task'
+    element.style.backgroundColor = text
+    divMytasks.appendChild(element)
+  }
+
   
 
   // Escreva seu código abaixo.
