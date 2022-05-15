@@ -2,6 +2,12 @@ let skills = ['html', 'css', 'JavaScript', 'Photoshop', 'Coreldraw']
 
 let trocaPalavra = (palavra, to = 'Bebeto') => {
     let resultado = palavra.replace('x', to )
-    console.log(resultado)
+    return resultado
 }
-trocaPalavra("Tryber x aqui!", 'viadinho')
+
+let recebeFuncao1 = (funcao1) => {
+    console.log(`${funcao1("Tryber x aqui!")} ${skills}`)
+}
+
+recebeFuncao1(trocaPalavra)
+
