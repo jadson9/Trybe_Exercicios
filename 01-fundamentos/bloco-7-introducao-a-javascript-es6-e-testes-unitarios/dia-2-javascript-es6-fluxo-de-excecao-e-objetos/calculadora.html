@@ -27,9 +27,14 @@
         if (value1 === '' || value2 === '') {
           throw new Error('Preencha todos os campos')
         }
+        if (isNaN(value1) || isNaN(value2)) {
+            throw new Error('Adicione somente numeros')
+        }
+        
         document.getElementById('result').innerHTML = `Resultado: ${result}`;
         document.getElementById('value1').value = '';
         document.getElementById('value2').value = '';
+
 
       }
       catch (erro) {
