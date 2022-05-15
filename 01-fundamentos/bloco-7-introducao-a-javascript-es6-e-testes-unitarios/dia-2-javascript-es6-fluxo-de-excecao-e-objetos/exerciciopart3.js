@@ -25,6 +25,8 @@ let mostraChaves = (objeto) => Object.keys(objeto)
 
 let mostraTamaho = (objeto) => mostraChaves(objeto).length
 
+let mostraValores = (objeto) => Object.values(objeto)
+
 adicionaTurno(lesson2, 'turno', 'noite')
 
 
@@ -33,4 +35,6 @@ console.log(lesson2)
 console.log(mostraChaves(lesson2))
 
 console.log(mostraTamaho(lesson2))
+
+console.log(mostraValores(lesson2))
 
