@@ -44,10 +44,24 @@ let lessonsAll = (list) => {
         let objetoCopy = Object.assign({}, list[i]);
         lessonsAllAux[`lesson${i + 1}`] = objetoCopy
     }
-    console.log(lessonsAllAux)
+    return lessonsAllAux
     // console.log(lessonw1)
 }
 
+let licoesTotais = lessonsAll([lesson1, lesson2, lesson3])
 
-lessonsAll([lesson1, lesson2, lesson3])
+let estudantesTotal = (objeto) => {
+    let aux1 = 0
+    let chaves = Object.keys(objeto)
+    for (i in chaves) {
+      let objeto1 = objeto[chaves[i]]['numeroEstudantes']
+      aux1 += objeto1 
+    }
+    console.log(aux1)
+}
+
+estudantesTotal(licoesTotais)
+
+
+
 
