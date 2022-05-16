@@ -70,3 +70,17 @@ let getValueByNumber = (lesson, posicao) => {
 getValueByNumber(lesson1, 0)
 
 
+let verificaValorChave = (lesson, chave, valor) => {
+    let entradas = Object.entries(lesson)
+    let check;
+    for (i in entradas) {
+        let entradaEntrada = [ chave, valor ]
+        check = (entradaEntrada[0] === entradas[i][0] && entradaEntrada[1] === entradas[i][1])
+        if (check) {
+            break
+        }
+    }
+    console.log(check)
+}
+
+verificaValorChave(lesson3, 'turno', 'fyjhf')
