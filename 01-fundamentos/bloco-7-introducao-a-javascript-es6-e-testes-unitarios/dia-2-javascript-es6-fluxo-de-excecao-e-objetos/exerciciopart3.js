@@ -62,6 +62,11 @@ let estudantesTotal = (objeto) => {
 
 estudantesTotal(licoesTotais)
 
+let getValueByNumber = (lesson, posicao) => {
+    let lessonValue = Object.values(lesson);
+    console.log(lessonValue[0])
+}
 
+getValueByNumber(lesson1, 0)
 
 
