@@ -1,11 +1,10 @@
+// Função de cadastro
 
 const pessoaContratada = (nomeCompleto) => {
     let nomeFormatado = nomeCompleto.toLowerCase().replace(/ /g, '_')
     let pessoaCad = {nomeCompleto: `${nomeCompleto}`, email: `${nomeFormatado}@trybe.com`}
     return pessoaCad
 }
-
-
 
 const newEmployees = (func) => {
     let d1 = func('Pedro Guerra');
@@ -19,7 +18,17 @@ const newEmployees = (func) => {
     return employees;
 };
 
-// console.log(pessoaContratada('Jadson Cerqueira'))
 console.log(newEmployees(pessoaContratada))
 
+// Função Sorteio
+
+const verificaNumeros = (numero, resultado) => numero === resultado ? "Parabéns você ganhou" : "Tente novamente"
+
+const sorteio = (func, num) => {
+    let resultado = Math.floor(Math.random() * 5 + 1 );
+    console.log(func(num, resultado))
+
+}
+
+sorteio(verificaNumeros, 5)
 
