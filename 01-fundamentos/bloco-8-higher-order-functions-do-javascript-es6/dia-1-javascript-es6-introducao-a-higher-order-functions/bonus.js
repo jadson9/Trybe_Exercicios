@@ -25,3 +25,10 @@ const danoDragao = () => {
     return dano
 }
 
+const danoWarrior = () => {
+    const dano = Math.floor(Math.random() * ((warrior['strength'] * warrior['weaponDmg']) - warrior['strength'] + 1) + warrior['strength'] );
+    return dano
+}
+
+
+
