@@ -20,6 +20,10 @@ const newEmployees = (func) => {
 
 console.log(newEmployees(pessoaContratada))
 
+
+
+
+
 // Função Sorteio
 
 const verificaNumeros = (numero, resultado) => numero === resultado ? "Parabéns você ganhou" : "Tente novamente"
@@ -32,3 +36,26 @@ const sorteio = (func, num) => {
 
 sorteio(verificaNumeros, 5)
 
+
+
+
+//Função que verifica respostas
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const contagemPontuação = (gabarito, resposta) => {
+    let resultado = 0;
+    for (i in gabarito) {
+        if (gabarito[i] === resposta[i]) {
+            resultado += 1
+        } else if (resposta[i] !== 'N.A' && gabarito[i] !== resposta[i]) {
+            resultado -= 0.5
+        }
+    }
+    return resultado
+}
+
+const verificaResposta = (gabarito, resposta, func) => func(gabarito, resposta)
+
+console.log(verificaResposta(RIGHT_ANSWERS, STUDENT_ANSWERS, contagemPontuação))
