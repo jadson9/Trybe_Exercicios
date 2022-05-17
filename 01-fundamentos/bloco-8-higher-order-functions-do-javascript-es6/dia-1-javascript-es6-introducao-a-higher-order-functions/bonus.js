@@ -20,7 +20,8 @@ const dragon = {
   
 const battleMembers = { mage, warrior, dragon };
 
-const calculaDano = (person) => {
-    const dano = Math.floor(Math.random() * person[strength] + 15 );
+const danoDragao = () => {
+    const dano = Math.floor(Math.random() * (dragon['strength'] - 15 + 1) + 15 );
     return dano
 }
+
