@@ -30,5 +30,19 @@ const danoWarrior = () => {
     return dano
 }
 
+const danoManaMago = () => {
+    const dano = Math.floor(Math.random() * ((mage['intelligence'] * 2) - mage['intelligence'] + 1) + mage['intelligence'] );
+    let ckmana = mage['mana'] < 15 
+    let mana = 0;
+    if(ckmana) {
+        return "Não possui mana suficiente!"
+    } else {
+        mana = 15
+        mage['mana'] = mage['mana'] - mana
+        return {dano, mana}
+    }
+    
+}
+
 
 
