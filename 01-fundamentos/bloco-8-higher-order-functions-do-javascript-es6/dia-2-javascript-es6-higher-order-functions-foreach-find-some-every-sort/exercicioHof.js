@@ -60,10 +60,12 @@ const books = [
       releaseYear: 1928,
     },
   ];
+
+// HOF procura o primeiro livro que o autor tem o ano de nascimento de 1947
   
 const procuraPrimeira = (lista) => lista.find((pessoa) => pessoa.author.birthYear === 1947)
 
-
+// HOF retorna um livro com o menor nome 
 
 const procuraMenorNome = (lista) => {
   let menor = lista[0].name;
@@ -77,4 +79,9 @@ const procuraMenorNome = (lista) => {
   return elemento
 };
 
-console.log(procuraMenorNome(books))
+// HOF Encontra o primeiro livro cujo nome possui 26 caracteres
+
+const nome26 = (lista) => lista.find(element => element.name.length === 26)
+
+console.log(nome26(books))
+
