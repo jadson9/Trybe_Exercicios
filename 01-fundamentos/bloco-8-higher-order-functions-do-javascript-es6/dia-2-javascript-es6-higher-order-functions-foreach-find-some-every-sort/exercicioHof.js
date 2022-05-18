@@ -61,7 +61,20 @@ const books = [
     },
   ];
   
-const procuraPimeira = (lista) => lista.find((pessoa) => pessoa.author.birthYear === 1947)
+const procuraPrimeira = (lista) => lista.find((pessoa) => pessoa.author.birthYear === 1947)
 
 
-console.log(procuraPimeira(books))
+
+const procuraMenorNome = (lista) => {
+  let menor = lista[0].name;
+  let elemento;
+  lista.forEach((element) => {
+    if (element.name.length < menor.length ) {
+      menor = element.name
+      elemento = element
+    }
+  })
+  return elemento
+};
+
+console.log(procuraMenorNome(books))
