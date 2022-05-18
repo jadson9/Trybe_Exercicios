@@ -83,5 +83,11 @@ const procuraMenorNome = (lista) => {
 
 const nome26 = (lista) => lista.find(element => element.name.length === 26)
 
-console.log(nome26(books))
+// HOF Ordena os livros por data de lançamento em ordem decrescente.
+
+function booksOrderedByReleaseYearDesc(lista) {
+  return lista.sort((a, b) => b.releaseYear - a.releaseYear)
+}
+
+console.log(booksOrderedByReleaseYearDesc(books))
 
