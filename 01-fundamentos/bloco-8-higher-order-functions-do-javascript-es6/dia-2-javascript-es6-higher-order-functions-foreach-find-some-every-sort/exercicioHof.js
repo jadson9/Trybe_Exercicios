@@ -153,4 +153,13 @@ function someBookWasReleaseOnThe80s(lista) {
   return lista.some(element => element.releaseYear > 1980 && element.releaseYear < 1989)
 }
 
-console.log(someBookWasReleaseOnThe80s(books))
+
+// HOF retorna true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+
+const expectedResultUnique = false;
+
+function authorUnique(lista) {
+  return lista.every(element => element.author.birthYear === lista[0].author.birthYear)
+}
+
+console.log(authorUnique(books))
