@@ -1,0 +1,23 @@
+{
+  "name": "trybe_exercicios",
+  "version": "1.0.0",
+  "description": "Este repositório possui todos os exercicios de aprendizagem desenvolvidas pr Jadson Cerqueira enquanto estudava na Trybe,",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadsoncerqueira/Trybe_Exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadsoncerqueira/Trybe_Exercicios/issues"
+  },
+  "homepage": "https://github.com/jadsoncerqueira/Trybe_Exercicios#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
