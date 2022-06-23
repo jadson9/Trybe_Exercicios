@@ -1,0 +1,28 @@
+.card-pokemon {
+    width: 300px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(199, 198, 198);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.452);
+}
+
+.nome {
+    font-size: 18px;
+}
+
+.img-pokemon {
+    
+    margin: auto ;
+}
+
+#info-pokemon {
+    width: max-content;
+    height: max-content;
+    margin: auto ;
+    color: rgb(73, 73, 73);
+    /* border: 1px solid red; */
+}
