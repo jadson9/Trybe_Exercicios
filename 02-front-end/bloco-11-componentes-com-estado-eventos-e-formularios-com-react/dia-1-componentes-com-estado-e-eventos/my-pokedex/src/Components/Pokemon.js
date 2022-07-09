@@ -52,16 +52,3 @@ class Pokemon extends Component {
 }
 
 export default Pokemon
-
-// {pokemons.filter((elem) => elem.name.includes('Pikachu')  ).map((elem1) => {
-//     return (
-//         <div key={elem1.id} className="card-pokemon">
-//             <div id="info-pokemon">
-//                 <h2 className="nome">Nome: {elem1.name}</h2>
-//                 <p className="tipo">Tipo: {elem1.type}</p>
-//                 <p className="peso">Peso: {elem1.averageWeight.value} {elem1.averageWeight.measurementUnit}</p>
-//             </div>
-//             <img className="img-pokemon" src={elem1.image}></img>
-//         </div>
-//     )
-// })}
