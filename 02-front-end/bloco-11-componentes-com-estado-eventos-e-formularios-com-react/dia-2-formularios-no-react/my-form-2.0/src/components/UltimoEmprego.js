@@ -33,6 +33,13 @@ class UltimoEmprego extends React.Component {
     const maxCaracterCargo = 40;
     const maxCaracterCargoDescricao = 500;
 
+    const { valorInicial = '' } = this.props;
+    this.setState({
+        curriculo: valorInicial,
+        cargo: valorInicial,
+        cargoDescricao: valorInicial,
+    })
+
     return (
       <fieldset>
 
