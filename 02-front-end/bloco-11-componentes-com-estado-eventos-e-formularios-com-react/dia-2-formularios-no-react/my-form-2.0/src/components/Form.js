@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'react';
+import UltimoEmprego from './UltimoEmprego';
 
 const states = [
     { value: 'AC', label: 'Acre' },
@@ -76,7 +76,7 @@ class Form extends React.Component {
     return (
       <form>
         <fieldset>
-
+          <legend>Dados Pessoais</legend>
           <label>
             Nome:
             <input name='nome' onChange={ this.hadleChange } type='text' value={ nome } />
@@ -132,6 +132,7 @@ class Form extends React.Component {
           </label>
 
         </fieldset>
+        <UltimoEmprego />
       </form>
     )
   }
