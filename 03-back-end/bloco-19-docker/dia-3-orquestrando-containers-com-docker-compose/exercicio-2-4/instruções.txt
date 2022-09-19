@@ -19,3 +19,9 @@ esse comportamento para exercitar nossos conhecimentos:
 - Para definir a pessoa usuária (root) e senha (a mesma que definimos no nosso MySQL), utilize respectivamente as envs database__connection__user e database__connection__password.
 - Utilize a opção depends_on para criar relações de dependências entre os serviços.
 - Suba o ambiente com o novo arquivo usando o docker-compose e então acesse a porta.
+
+Exercício 4:
+Agora vamos praticar os conceitos de volumes e networks.
+- Configure o nosso serviço mysql para utilizar um volume conforme vimos no conteúdo. Utilize o caminho target /var/lib/mysql.
+- Em vez de utilizar a rede padrão criada pelo Compose, defina uma rede chamada my-network para a comunicação dos dois serviços.
+- Suba o ambiente com o novo arquivo usando o docker-compose e então acesse-o.

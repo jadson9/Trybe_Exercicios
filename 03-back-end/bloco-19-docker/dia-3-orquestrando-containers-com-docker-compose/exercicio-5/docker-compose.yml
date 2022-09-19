@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    build: exercicio/
+    ports:
+      - 8080:80
+    volumes:
+      - /home/jadson/Trybe/Trybe_Exercicios/03-back-end/bloco-19-docker/dia-3-orquestrando-containers-com-docker-compose/exercicio-5/exercicio/build:/usr/app/bu

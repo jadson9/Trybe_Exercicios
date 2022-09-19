@@ -14,10 +14,22 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    networks:
+      - my-network
   db:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: '12345'
     # restart: always
+    volumes:
+      - dados-banco:/var/lib/mysql
+    networks:
+      - my-network
     healthcheck:
       test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+    
+volumes:
+  dados-banco:
+
+networks:
+  my-network:
