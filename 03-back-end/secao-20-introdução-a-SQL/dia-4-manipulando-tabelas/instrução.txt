@@ -1,4 +1,4 @@
-Para realizar os exercícios 1 a 7, restaure o banco de dados Pixar abaixo.
+Para realizar os exercícios 1 a 7, restaure o banco de dados Pixar logo abaixo.
 
     DROP SCHEMA IF EXISTS Pixar;
     CREATE SCHEMA Pixar;
