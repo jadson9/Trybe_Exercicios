@@ -1,0 +1,40 @@
+-- SELECT MAX(salary) FROM hr.employees;
+
+-- SELECT MAX(salary) - MIN(salary) FROM hr.employees;
+
+-- SELECT job_id, AVG(salary) media_salarial FROM hr.employees
+-- GROUP BY job_id ORDER BY media_salarial DESC;
+
+-- SELECT min_salary FROM hr.jobs;
+
+-- SELECT MAX(salary) maior, MIN(salary) menor, SUM(salary) soma, AVG(salary) media FROM hr.employees;
+
+-- SELECT COUNT(*) FROM hr.employees 
+-- WHERE job_id = 'IT_PROG';
+
+-- SELECT job_id, AVG(salary) media_salarial FROM hr.employees 
+-- GROUP BY job_id
+-- HAVING job_id <> 'IT_PROG'
+-- ORDER BY media_salarial DESC;
+
+-- SELECT department_id, COUNT(*) numero_de_funcionarios, AVG(salary) FROM hr.employees 
+-- GROUP BY department_id
+-- HAVING numero_de_funcionarios > 10;
+
+-- SELECT REPLACE(phone_number, '515', '777') FROM hr.employees;
+
+-- SELECT * FROM hr.employees
+-- WHERE CHAR_LENGTH(first_name) >= 8;
+
+-- SELECT employee_id, first_name, YEAR(hire_date) FROM hr.employees;
+
+-- SELECT employee_id, first_name, DAY(hire_date) FROM hr.employees;
+
+-- SELECT employee_id, first_name, MONTH(hire_date) FROM hr.employees;
+
+-- SELECT UCASE(first_name) FROM hr.employees;
+
+-- SELECT last_name, hire_date FROM hr.employees
+-- WHERE YEAR(hire_date) = 1987;
+
+-- SELECT first_name, last_name, DATEDIFF(NOW(), hire_date) dias_na_empresa FROM hr.employees;
