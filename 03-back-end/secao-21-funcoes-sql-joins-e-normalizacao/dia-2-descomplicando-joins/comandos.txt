@@ -1,0 +1,19 @@
+-- SELECT movie.title, boxoff.domestic_sales, boxoff.international_sales
+-- FROM Pixar.Movies movie
+-- INNER JOIN Pixar.BoxOffice boxoff
+-- ON movie.id = boxoff.movie_id;
+
+-- SELECT movie.title, boxoff.domestic_sales, boxoff.international_sales
+-- FROM Pixar.Movies movie
+-- INNER JOIN Pixar.BoxOffice boxoff
+-- ON boxoff.international_sales > boxoff.domestic_sales;
+
+-- SELECT movie.title, boxoff.rating
+-- FROM Pixar.Movies movie
+-- INNER JOIN Pixar.BoxOffice boxoff
+-- ON boxoff.movie_id > movie.id;
+
+-- SELECT movie.id, movie.title, movie.director, movie.year, movie.length_minutes, movie.theater_id
+-- FROM Pixar.Theater the
+-- LEFT JOIN Pixar.Movies movie
+-- ON movie.theater_id = the.id;
