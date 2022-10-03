@@ -1,0 +1,23 @@
+{
+  "name": "dia-4-node-js-express-e-middlewares",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./src/testes/*.test.js",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.3",
+    "chai-http": "^4.3.0",
+    "mocha": "10.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
