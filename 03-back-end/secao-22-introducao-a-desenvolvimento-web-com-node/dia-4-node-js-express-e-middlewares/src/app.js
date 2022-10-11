@@ -1,4 +1,6 @@
 const express = require('express');
+const crypto = require('crypto');
+const { setToken } = require('./tokens/tokens')
 
 const {
   validationPropName,
@@ -8,8 +10,11 @@ const {
   validationPropDescrip,
   validationPropCreated,
   validationPropRating,
-  validationPropDificulty
+  validationPropDificulty,
+  validationSignup,
+  autentication
 } = require('./midd.js')
+
 
 const atividades = [
   {
@@ -37,10 +42,18 @@ app.post(
   validationPropCreated,
   validationPropRating,
   validationPropDificulty,
+  autentication,
   (req, res) => {
     const dataReceive = { ...req.body };
     atividades.push(dataReceive);
     res.status(201).json({ "message": "Atividade cadastrada com sucesso!" })
+})
+
+
+app.post('/signup', validationSignup, async (req, res) => {
+  const result = crypto.randomBytes(8).toString('hex');
+  await setToken(result);
+  res.status(200).json({ "token": result })
 })
 
 module.exports = app;

@@ -1,6 +1,10 @@
+const { getTokens } = require("./tokens/tokens");
+
 const proprieties = ['name', 'price', 'description'];
 
 const proprietiesDescription = ['createdAt', 'rating', 'difficulty']
+
+const valuesSignup = ['email', 'password', 'firstName', 'phone'];
 
 const validationPropName = (req, res, next) => {
   const corpo = req.body;
@@ -76,6 +80,29 @@ const validationPropDificulty = (req, res, next) => {
 }
 
 
+const validationSignup = (req, res, next) => {
+  const { body } = req;
+  if(valuesSignup.every((el) => el in body)) {
+    next();
+  } else {
+    res.status(401).send({ message: 'Campos ausentes!' })
+  }
+}
+
+const autentication = async (req, res, next) => {
+  const { authorization } = req.headers;
+  const keys = await getTokens();
+  let val = authorization ? keys.some((el) => el === authorization) : false;
+  if (val) {
+    next()
+  } else {
+    const message = authorization.length < 16 ? 'Token Inválido'
+      : 'Token não encontrado'
+    res.status(401).send({ message })
+  }
+}
+
+
 module.exports = {
   validationPropName,
   validationNameQuant,
@@ -84,7 +111,9 @@ module.exports = {
   validationPropDescrip,
   validationPropCreated,
   validationPropRating,
-  validationPropDificulty
+  validationPropDificulty,
+  validationSignup,
+  autentication,
 }
 
 // dd/mm/aaaa
