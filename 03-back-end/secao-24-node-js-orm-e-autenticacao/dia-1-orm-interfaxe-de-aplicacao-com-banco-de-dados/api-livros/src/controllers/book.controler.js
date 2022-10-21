@@ -18,7 +18,14 @@ const getById = async (req, res) => {
   return res.status(404).json({ message: 'Book not found' });
 }
 
+const insert = async (req, res) => {
+  const { title, author, pageQuantity } = req.body;
+  const newBook = await bookService.insert(title, author, pageQuantity);
+  res.status(201).json(newBook);
+}
+
 module.exports = {
   getAll,
   getById,
+  insert,
 }
