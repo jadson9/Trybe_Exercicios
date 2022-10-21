@@ -1,6 +1,5 @@
 const bookModel = (sequelize, DataTypes) => {
   const book = sequelize.define('book', {
-    id: DataTypes.INTEGER,
     title: DataTypes.STRING,
     author: DataTypes.STRING,
     pageQuantity: DataTypes.INTEGER,
@@ -9,3 +8,5 @@ const bookModel = (sequelize, DataTypes) => {
   })
   return book;
 };
+
+module.exports = bookModel;
