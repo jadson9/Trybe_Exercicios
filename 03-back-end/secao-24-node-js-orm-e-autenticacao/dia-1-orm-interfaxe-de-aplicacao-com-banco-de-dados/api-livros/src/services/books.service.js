@@ -6,7 +6,13 @@ const getAll = async () => {
   return books;
 };
 
+const getById = async (id) => {
+  const bookUni = await book.findByPk(id);
+  return bookUni;
+};
+
 
 module.exports = {
   getAll,
+  getById,
 };
