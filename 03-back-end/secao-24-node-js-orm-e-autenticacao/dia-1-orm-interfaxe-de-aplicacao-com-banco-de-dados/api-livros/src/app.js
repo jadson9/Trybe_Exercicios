@@ -8,5 +8,6 @@ app.use(express.json());
 app.get('/book', bookController.getAll);
 app.get('/book/:id', bookController.getById);
 app.post('/book', bookController.insert);
+app.put('/book/:id', bookController.update);
 
 module.exports = app;

@@ -16,9 +16,15 @@ const insert = async (title, author, pageQuantity) => {
   return newBook;
 };
 
+const update = async (id, title, author, pageQuantity) => {
+  const [updatedBook] = await book.update({ title, author, pageQuantity }, { where: { id }});
+  return updatedBook;
+};
+
 
 module.exports = {
   getAll,
   getById,
   insert,
+  update,
 };

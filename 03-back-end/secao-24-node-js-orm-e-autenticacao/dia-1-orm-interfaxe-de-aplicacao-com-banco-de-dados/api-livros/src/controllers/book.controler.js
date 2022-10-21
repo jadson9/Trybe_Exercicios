@@ -24,8 +24,16 @@ const insert = async (req, res) => {
   res.status(201).json(newBook);
 }
 
+const update = async (req, res) => {
+  const { id } = req.params;
+  const { title, author, pageQuantity } = req.body;
+  await bookService.update(Number(id), title, author, pageQuantity);
+  res.status(200).json({ message: 'Book updated!' });
+}
+
 module.exports = {
   getAll,
   getById,
   insert,
+  update,
 }
