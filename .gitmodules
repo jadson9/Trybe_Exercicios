@@ -1,0 +1,9 @@
+[submodule "03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/[03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/exercise-sequelize-associations-1-1-e-1-n"]
+	path = 03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/[03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/exercise-sequelize-associations-1-1-e-1-n
+	url = git@github.com:jadsoncerqueira/exercise-sequelize-associations-11-1n.git
+[submodule "03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/exercise-sequelize-associations-1-1-e-1-n"]
+	path = 03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/exercise-sequelize-associations-1-1-e-1-n
+	url = git@github.com:jadsoncerqueira/exercise-sequelize-associations-11-1n.git
+[submodule "03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/exercise-sequelize-associations-1-1-e-1-n"]
+	path = 03-back-end/secao-24-node-js-orm-e-autenticacao/dia-2-orm-associations-1-1-e-1-N/exercise-sequelize-associations-1-1-e-1-n
+	url = git@github.com:jadsoncerqueira/exercise-sequelize-associations-11-1n.git
