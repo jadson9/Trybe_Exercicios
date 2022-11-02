@@ -4,5 +4,3 @@ type posibilesArea = 'km' | 'hm' | 'dam' | 'm' | 'dm' | 'cm' | 'mm';
 const convertArea = (valor: number, to: posibilesArea, from: posibilesArea): number => {
     return (valor * tableArea[to]) / tableArea[from];
 }
-
-console.log(convertArea(1, 'm', 'km'))
