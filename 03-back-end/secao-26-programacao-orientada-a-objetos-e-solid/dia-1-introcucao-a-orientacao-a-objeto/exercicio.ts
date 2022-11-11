@@ -19,7 +19,7 @@ interface Params {
 }
 
 
-class estudantes {
+class Estudantes {
   private matricula: number;
   private nome: string;
   private notasDeProvas: NotasProvas;
@@ -50,3 +50,15 @@ class estudantes {
 
   }
 }
+
+const dadosEstudante: Params = {
+  matricula: 12,
+  nome: 'Jadson',
+  notasDeProvas: { nota1: 5, nota2: 7, nota3: 3, nota4: 2 },
+  notasDeTrabalho: { nota1: 8, nota2: 10 },
+}
+
+const estudate = new Estudantes(dadosEstudante);
+
+console.log("Soma", estudate.soma);
+console.log("Media", estudate.media);
