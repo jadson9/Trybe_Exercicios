@@ -84,3 +84,10 @@ class Students extends Person {
     return this.params.enrollment;
   }
 }
+
+interface Enployee {
+  registration: number;
+  salary: number;
+  admissionDate: Date;
+  generateregistration(): string;
+}
