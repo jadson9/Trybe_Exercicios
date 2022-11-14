@@ -10,6 +10,8 @@
 
 // console.log(data1);
 
-const t = new Date('2021-04-03')
+// const t = new Date('2021-04-03')
 
-console.log(t.getTime())
+let eu = 1
+
+console.log(1+=1)
