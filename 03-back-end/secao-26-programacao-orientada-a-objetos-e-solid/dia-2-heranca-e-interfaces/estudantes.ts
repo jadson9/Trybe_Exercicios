@@ -47,6 +47,14 @@ class Person {
   set name(n: string) {
     this._name = n;
   }
+
+  get birthDate(): Date {
+    return this._birthDate;
+  }
+
+  set birthDate(b: Date) {
+    this._birthDate = b;
+  }
 }
 
 
@@ -109,5 +117,23 @@ class Subject {
       throw new Error('Nome deve possuir no minimo 3 caracteres');
     }
     this._name = n;
+  }
+}
+
+class Teacher extends Person {
+  constructor(_name: string, _birthDate: Date, private _subject: Subject) {
+    super(_name, _birthDate);
+  }
+
+  get name(): string {
+    return super.name;
+  }
+
+  get birthDate(): Date {
+    return super.birthDate
+  }
+
+  get subject(): Subject {
+    return this._subject;
   }
 }
