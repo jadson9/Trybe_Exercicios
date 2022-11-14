@@ -91,3 +91,23 @@ interface Enployee {
   admissionDate: Date;
   generateregistration(): string;
 }
+
+
+class Subject {
+  constructor (private _name: string) {
+    if (_name.length < 3) {
+      throw new Error('Nome deve possuir no minimo 3 caracteres');
+    }
+  }
+
+  get name(): string {
+    return this._name;
+  }
+
+  set name(n: string) {
+    if (n.length < 3) {
+      throw new Error('Nome deve possuir no minimo 3 caracteres');
+    }
+    this._name = n;
+  }
+}
