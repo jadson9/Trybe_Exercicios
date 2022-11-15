@@ -93,11 +93,13 @@ class Students extends Person {
   }
 }
 
-interface Enployee {
+class Enployee extends Person {
   registration: number;
   salary: number;
   admissionDate: Date;
-  generateregistration(): string;
+  generateregistration(): number {
+    return this.registration
+  };
 }
 
 
@@ -120,7 +122,7 @@ class Subject {
   }
 }
 
-class Teacher extends Person {
+class Teacher extends Enployee {
   constructor(_name: string, _birthDate: Date, private _subject: Subject) {
     super(_name, _birthDate);
   }
