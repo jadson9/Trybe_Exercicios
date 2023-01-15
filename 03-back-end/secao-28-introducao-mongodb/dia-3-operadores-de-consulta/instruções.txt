@@ -1,0 +1,14 @@
+Comando 1: db.movies.find({category: {$all: ["action", "adventure"]}}).pretty();
+Comando 2: db.movies.find({$and: [{category: {$all: ["action", "sci-fi"]}}, {imdbRating: {$gt: 7}}]}).pretty();
+Comando 3: db.movies.find({ ratings: {$elemMatch: {$gt: 103}}}).pretty();
+Comando 4: db.movies.find({ ratings: {$elemMatch: {$gt: 100, $lt: 105}}}, {_id: 0, title: 1, ratings: 1}).pretty();
+Comando 5: db.movies.find({ratings: {$elemMatch: {$gt: 64, $lt: 105, $mod: [9, 0]}}}, {_id: 0, title: 1, ratings: 1}).pretty();
+Comando 6: db.movies.find({$and: [{category: {$all: ["adventure"]}}, {ratings: {$elemMatch: {$gt: 103}}}]}).pretty();
+Comando 7: db.movies.find({category: { $size: 2 }}).pretty();
+Comando 8: db.movies.find({ratings: { $size: 4 }}).pretty();
+Comando 9: db.movies.find({$and : [{budget: { $gt: 0 }}, {category: { $size: 2}}]}).pretty();
+Comando 10: db.movies.find({$or: [{category: {$all: ["sci-fi"]}}, {ratings: {$elemMatch: {$gt: 199}}}]}, {_id: 0, title: 1, ratings: 1, category: 1}).pretty();
+Comando 11: db.movies.find({$and: [{category: {$in: ["adventure", "family"]}}, {imdbRating: {$gt: 6}}]}).pretty();
+Comando 12: db.movies.find({description: {$regex: /^The/ }}).pretty();
+Comando 13: db.movies.find({description: {$regex: /humanity.$/ }}).pretty();
+Comando 13: db.movies.find({$expr: {$gt: ["$grossWorldwide", "$budget"] }}).pretty();
