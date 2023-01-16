@@ -1,0 +1,13 @@
+comando 1: db.movies.update({title: "Batman"}, {$set: {imdbRating: 7.7}});
+comando 2: db.movies.update({title: "Godzilla"}, {$set: {budget: 1}});
+comando 3: db.movies.update({title: "Home Alone"}, {$set: {budget: 15,imdbRating: 5.5}});
+comando 4: db.movies.update({title: "Batman"}, {$inc: {imdbRating: 2}});
+comando 5: db.movies.update({title: "Home Alone"}, {$inc: {budget: 5}});
+comando 6: db.movies.update({title: "Batman"}, {$mul: {imdbRating: 4}});
+comando 7: db.movies.update({title: "Batman"}, {$rename: {budget: "estimatedBudget"}});
+comando 8: db.movies.update({title: "Home Alone"}, {$min: {budget: 5}});
+comando 9: db.movies.update({title: "Godzilla"}, {$max: {imdbRating: 8.6}, $set: {"category.1": "thriller"}});
+comando 10: db.movies.update({title: "Home Alone"}, {$currentDate: {lastUpdated: { $type: "timestamp" }}});
+comando 11: db.movies.updateMany({}, {$set: {sequels: 0}});
+comando 12: db.movies.updateMany({}, {$unset: {estimatedBudget: "", budget: ""}});
+comando 13: db.movies.updateMany({title: {$in: ["Batman", "Home Alone"]}}, {$max: {imdbRating: 17, budget: ""}});
