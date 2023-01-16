@@ -1,0 +1,14 @@
+comando 1: db.movies.update({title: "Batman"}, {$push: {category: "superhero"}});
+comando 2: db.movies.update({title: "Batman"}, {$push: { category: { $each: ["villain", "comic-based"]}}});
+comando 3: db.movies.update({title: "Batman"}, {$pull: {category: "action"}});
+comando 4: db.movies.update({title: "Batman"}, {$pop: {category: -1}});
+comando 5: db.movies.update({title: "Batman"}, {$pop: {category: 1}});
+comando 6: db.movies.update({title: "Batman"}, {$addToSet: {category: "action"}});
+comando 7: db.movies.updateMany({title: {$in: ["Batman", "Home Alone"]}}, {$addToSet: {category: "90's"}});
+comando 8: db.movies.update({title: "Home Alone"}, {$addToSet: {cast: {$each: [{"actor": "Macaulay Culkin", "character": "Kevin"},{"actor": "Joe Pesci","character": "Harry"},{"actor": "Daniel Stern"}]}}});
+comando 9: db.movies.updateMany({title: "Home Alone", "cast.actor": "Daniel Stern"}, {$set: {"cast.$.character": "Marv"}});
+comando 10: db.movies.update({title: "Batman"}, {$addToSet: {cast: {$each: [{"character": "Batman"},{"character": "Alfred"},{"character": "Coringa"}]}}});
+comando 11.1: db.movies.updateMany({title: "Batman", "cast.character": "Batman"}, {$push: {"cast.$.actor": "Christian Bale"}});
+comando 11.2: db.movies.updateMany({title: "Batman", "cast.character": "Alfred"}, {$push: {"cast.$.actor": "Michael Caine"}});
+comando 11.3: db.movies.updateMany({title: "Batman", "cast.character": "Coringa"}, {$push: {"cast.$.actor": "Michael Caine"}});
+comando 12: db.movies.update({title: "Batman", "cast.character": "Batman"}, {$push: {"cast.$.actor": {$each: ["Michael Keaton", "Val Kilmer", "George Clooney"], $sort: 1}}});
