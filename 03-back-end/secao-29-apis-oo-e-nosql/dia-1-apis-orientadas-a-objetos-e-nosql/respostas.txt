@@ -1,0 +1,26 @@
+1. O que são os ODMs?
+  R = É uma das técnicas usadas para manipular dados estruturados em banco de dados não relacional.
+
+
+2. Qual a diferença entre ODM e ORM?
+  R = ODM lida com banco de dados não re lacional e ORM lida com banco de dados relacional
+
+3. De acordo com a documentação do Mongoose, uma Interface, um Schema e uma Model servem para representar o quê? Dê exemplos.
+  R = Interface é um contrato que uma determinada funcao ou variaveis devem seguir, fazendo as tipagens.
+      O Schema é a estrutura dos dados da coleção.
+      a Model é uma funcao que vai prover outras funções para manipular e acessar os dados da coleção
+
+4. Quais são os 4 pilares da programação orientada a objetos? Discorra sobre a definição de cada um deles e dê exemplos.
+  R = Abstração, encapsulamneto, herança e polimorfismo.
+   - A abstração consiste em voce representar um objeto da vida real para a programação.
+   - O encapsulamneto seria a segurança dos dados, evitando o acesso direto aos dados, com o auxilio dos metodos
+   especiais chamados getters e setters.
+   - A herança consiste em classes que podem herdar metodos e caracteristicas de outra classe, evitando codigos repetidos.
+   - O polimorfismo seguindo a logica da herança, classe pode mudar o funcionamento interno de um metodo herdado de um objeto pai.
+
+
+5. Agora incremente a aplicação TRIX e adicione mais um endpoint , que deve retornar todas as transferências
+6. Ainda na aplicação TRIX, crie um novo endpoint que deve retornar todas as transferências de uma determinada chave (key);
+
+link do repositorio onde foi feito as atividades da atividade 6 e 7: https://github.com/jadsoncerqueira/poo-trix
+
